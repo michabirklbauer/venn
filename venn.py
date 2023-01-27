@@ -99,7 +99,7 @@ def venn(set_1: set,
 
         # draw contour
         venn2_circles(subsets = (len(set_1.difference(set_2)),
-                                 len(set_2.diffenence(set_1)),
+                                 len(set_2.difference(set_1)),
                                  len(set_1.intersection(set_2))),
               linewidth = linewidth)
 
@@ -110,6 +110,8 @@ def venn(set_1: set,
             plt.title(title)
             plt.savefig(filename.split(".")[0] + ".png", dpi = 300, transparent = True, bbox_inches = "tight")
             plt.savefig(filename.split(".")[0] + ".svg", dpi = 300, transparent = True, bbox_inches = "tight")
+        else:
+            plt.title(title)
 
     else:
 
@@ -156,5 +158,7 @@ def venn(set_1: set,
             plt.title(title)
             plt.savefig(filename.split(".")[0] + ".png", dpi = 300, transparent = True, bbox_inches = "tight")
             plt.savefig(filename.split(".")[0] + ".svg", dpi = 300, transparent = True, bbox_inches = "tight")
+        else:
+            plt.title(title)
 
     return fig

@@ -81,7 +81,7 @@ from venn import venn
 def test_venn2():
     assert venn(set_1,
                 set_2,
-                label = ["Set 1", "Set 2"],
+                labels = ["Set 1", "Set 2"],
                 colors = ["#4361EE", "#4CC9F0"]) is not None
 
 def test_venn3():

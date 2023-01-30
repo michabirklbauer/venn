@@ -11,6 +11,9 @@ from matplotlib import pyplot as plt
 from typing import List
 import warnings
 
+__version = "1.0.1"
+__date = "2023-01-30"
+
 def venn(set_1: set,
          set_2: set,
          set_3: set = None,
@@ -98,10 +101,11 @@ def venn(set_1: set,
               alpha = alpha)
 
         # draw contour
-        venn2_circles(subsets = (len(set_1.difference(set_2)),
-                                 len(set_2.difference(set_1)),
-                                 len(set_1.intersection(set_2))),
-              linewidth = linewidth)
+        if contour:
+            venn2_circles(subsets = (len(set_1.difference(set_2)),
+                                     len(set_2.difference(set_1)),
+                                     len(set_1.intersection(set_2))),
+                  linewidth = linewidth)
 
         # save file
         if filename is not None:

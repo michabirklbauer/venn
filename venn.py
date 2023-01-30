@@ -105,7 +105,7 @@ def venn(set_1: set,
             venn2_circles(subsets = (len(set_1.difference(set_2)),
                                      len(set_2.difference(set_1)),
                                      len(set_1.intersection(set_2))),
-                  linewidth = linewidth)
+                          linewidth = linewidth)
 
         # save file
         if filename is not None:
